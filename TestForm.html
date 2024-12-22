@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LWC with Lightning Out</title>
+    <script src="https://playful-hawk-t99hbb-dev-ed.trailblaze.my.salesforce.com/lightning/lightning.out.js"></script>
+</head>
+<body>
+    <div id="lightning"></div>
+    <script>
+        $Lightning.use("c:myLightningApp", function() {
+            $Lightning.createComponent(
+                "c:myFormComponent",
+                {}, // parameters if needed
+                "lightning",
+                function(cmp) {
+                    console.log("LWC Component Loaded!");
+                }
+            );
+        }, "https://playful-hawk-t99hbb-dev-ed.trailblaze.my.salesforce.com");
+    </script>
+</body>
+</html>
